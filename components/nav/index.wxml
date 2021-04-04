@@ -1,0 +1,5 @@
+<view class="content">
+    <image src="{{isLeft?lefton:leftdis}}" bind:tap='leftclick' class="previousicon icons"/>
+    <text class="navcontent">{{title}}</text>
+    <image src="{{isRight?righton:rightdis}}" bind:tap="rightclick" class="nexticon icons" />
+</view>

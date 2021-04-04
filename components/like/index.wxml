@@ -1,0 +1,4 @@
+<view class="content" bindtap="clickLike" data-id='{{likeId}}' data-type='{{type}}'>
+  <image class="likeimg" src="{{isLike?likeSrc:likeNo}}"></image>
+  <text class="like-num">{{likeNum}}</text>
+</view>

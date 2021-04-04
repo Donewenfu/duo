@@ -1,0 +1,32 @@
+.content {
+  display: flex;
+}
+.content .left-num {
+  margin-right: 10rpx;
+}
+.content .left-num .num-tag {
+  font-size: 24rpx;
+}
+.content .left-num .num-no {
+  font-size: 44rpx;
+  font-weight: bold;
+}
+.content .line {
+  width: 1px;
+  height: 42rpx;
+  background-color: #333;
+  position: relative;
+  top: 7rpx;
+}
+.content .right-time {
+  margin-left: 16rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content .right-time .month {
+  font-size: 20rpx;
+}
+.content .right-time .year {
+  font-size: 16rpx;
+}

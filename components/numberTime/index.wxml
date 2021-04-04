@@ -1,0 +1,12 @@
+<view class="content">
+    <view class="left-num">
+        <text class="num-tag">No.</text>
+        <text class="num-no">{{_index}}</text>
+    </view>
+    <view class="line"></view>
+    <view class="right-time">
+        <text class="month">{{month}}</text>
+        <text class="year">{{year}}</text>
+    </view>
+</view>
+  

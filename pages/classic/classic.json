@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "t-like":"/components/like/index",
+    "t-movie":"/components/classic/movie/index",
+    "t-time":"/components/numberTime/index",
+    "t-nav":"/components/nav/index"
+  }
+}

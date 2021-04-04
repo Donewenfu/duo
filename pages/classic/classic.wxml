@@ -1,0 +1,15 @@
+<view class="content">
+  <view class="conten-header">
+    <t-time indexNum='{{movieData.index}}'></t-time>
+    <t-like bindtapLike='clickLike' type='{{movieData.type}}' likeNum='{{movieData.fav_nums}}' likeId='{{movieData.id}}' isLike='{{movieData.like_status}}'></t-like>
+  </view>
+  
+  <view class="content-body">
+    <t-movie img='{{movieData.image}}' word='{{movieData.content}}'></t-movie>
+  </view>
+
+  <view class="content-footer">
+    <t-nav isLeft='{{isleft}}' title='{{movieData.title}}' isRight='{{isright}}' bind:left='leftclick' bind:right='rightclick'></t-nav>
+  </view>
+
+</view>

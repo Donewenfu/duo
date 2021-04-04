@@ -1,0 +1,5 @@
+<view class="content">
+  <image class="tag" src="./images/movietag.png"></image>
+  <image class="img" src="{{img}}"></image>
+  <text  class="content">{{word}}</text>
+</view>
