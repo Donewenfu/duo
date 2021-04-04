@@ -7,7 +7,7 @@ class classic extends http{
       url:'classic/latest',
       success:(res)=>{
         callback(res)
-        //把最新的id存储在本地
+        //最新的id存储在本地
         wx.setStorageSync('classicId', res.index)
       }
     })
