@@ -8,7 +8,6 @@ Component({
     indexNum:{
       type:Number,
       observer(newVal,oldVal){
-         console.log(newVal)
          let newIndex = newVal<10?'0'+newVal:newVal
          this.setData({
           _index:newIndex

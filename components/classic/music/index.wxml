@@ -1,2 +1,11 @@
-<!--components/classic/music/index.wxml-->
-<text>components/classic/music/index.wxml</text>
+<view class="content">
+    <view class="musiccontent">
+       <image class="musicimg" src="{{img}}" >
+        <image class="musiccontrol" bind:tap='clickplay' src="{{openMusic?pauseIcon:playIcon}}" />
+       </image>
+       <image class="tag" src="./images/music@tag.png" />
+    </view>
+    <view class="muscitext">
+        <text class="musicword">{{word}}</text>
+    </view>
+</view>

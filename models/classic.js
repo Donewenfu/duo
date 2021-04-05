@@ -14,13 +14,22 @@ class classic extends http{
   }
   
   //获取上一期下一期
-  getpreOrnex(preOrnex,id,callback){
-    this.request({
-      url:'classic/'+id+'/'+preOrnex,
-      success:(res)=>{
-        callback(res)
-      }
-    })
+  getpreOrnex(preOrnex,index,callback){
+    let keys = preOrnex=='next'?this._getkey(index+1):this._getkey(index-1);
+    //查看缓存中时候有数据
+    let localStorageData = wx.getStorageSync(keys);
+    if(!localStorageData){//没有缓存需要api请求
+      this.request({
+        url:'classic/'+index+'/'+preOrnex,
+        success:(res)=>{
+          callback(res)
+          wx.setStorageSync(keys,res)
+        }
+      })
+    }else{
+      callback(localStorageData)
+    }
+    
   }
 
   //是否为最新一期
@@ -41,6 +50,12 @@ class classic extends http{
     }else{
       return true
     }
+  }
+
+  //转换key
+  _getkey(index){
+    let keys = 'classic-'+index;
+    return keys
   }
 }
 

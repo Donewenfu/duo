@@ -53,6 +53,7 @@ Component({
       })
       //点赞的类型
       let likeType = this.properties.isLike?'like':'cancel'
+      console.log(likeType)
       //自定义事件
       this.triggerEvent('tapLike',{
         id:likeIds,

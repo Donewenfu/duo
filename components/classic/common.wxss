@@ -1,0 +1,23 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+.content .tag {
+  width: 46rpx;
+  height: 146rpx;
+  position: fixed;
+  top: 561rpx;
+  left: 26rpx;
+}
+.content .img {
+  width: 100%;
+  height: 500rpx;
+}
+.content .content {
+  display: inline-block;
+  max-width: 551rpx;
+  margin-top: 119rpx;
+  font-size: 32rpx;
+}

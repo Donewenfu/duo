@@ -14,17 +14,24 @@ Page({
     //左边
     isleft:false,
     //右边
-    isright:true
+    isright:true,
+    //点赞的状态
+    likeStatus:false,
+    //点赞的数量
+    likeCount:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
     //获取最新一期
     classicModel.getlatestData((res)=>{
       this.setData({
-        movieData:res
+        movieData:res,
+        likeStatus:res.like_status,
+        likeCount:res.fav_nums
       })
       console.log(this.data.movieData)
     })
@@ -35,17 +42,27 @@ Page({
     let likeDetai = e.detail;
     console.log(likeDetai)
     likeModel.clickLike(likeDetai.type,likeDetai.id,likeDetai.likeType,(res)=>{
-        console.log(res)
       })
   },
   //点击左边切换
   leftclick(){
       this.getClassnextOrpre('next')
+      likeModel.getLikeinfo(this.data.movieData.type,this.data.movieData.id,(res)=>{
+        this.setData({
+          likeStatus:res.like_status,
+          likeCount:res.fav_nums
+        })
+      })
   },
   //点击右边切换
   rightclick(){
     this.getClassnextOrpre('previous')
-    
+    likeModel.getLikeinfo(this.data.movieData.type,this.data.movieData.id,(res)=>{
+      this.setData({
+        likeStatus:res.like_status,
+        likeCount:res.fav_nums
+      })
+    })
   },
   //获取上一期下一期
   getClassnextOrpre(nexorpre){

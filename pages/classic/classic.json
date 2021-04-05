@@ -3,6 +3,8 @@
     "t-like":"/components/like/index",
     "t-movie":"/components/classic/movie/index",
     "t-time":"/components/numberTime/index",
-    "t-nav":"/components/nav/index"
+    "t-nav":"/components/nav/index",
+    "t-verse":"/components/classic/verse/index",
+    "t-music":"/components/classic/music/index"
   }
 }

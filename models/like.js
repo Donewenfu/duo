@@ -15,6 +15,15 @@ class like extends http {
       }
     })
   }
+  // 获取点赞信息
+  getLikeinfo(types,ids,callback){
+    this.request({
+      url:`classic/${types}/${ids}/favor`,
+      success(res){
+        callback(res)
+      }
+    })
+  }
 }
 
 export {like}

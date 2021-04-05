@@ -1,11 +1,13 @@
 <view class="content">
   <view class="conten-header">
     <t-time indexNum='{{movieData.index}}'></t-time>
-    <t-like bindtapLike='clickLike' type='{{movieData.type}}' likeNum='{{movieData.fav_nums}}' likeId='{{movieData.id}}' isLike='{{movieData.like_status}}'></t-like>
+    <t-like bindtapLike='clickLike' type='{{movieData.type}}' likeNum='{{likeCount}}' likeId='{{movieData.id}}' isLike='{{likeStatus}}'></t-like>
   </view>
   
   <view class="content-body">
-    <t-movie img='{{movieData.image}}' word='{{movieData.content}}'></t-movie>
+    <t-movie img='{{movieData.image}}' word='{{movieData.content}}' wx:if="{{movieData.type==100}}"></t-movie>
+    <t-verse img='{{movieData.image}}' word='{{movieData.content}}' wx:if="{{movieData.type==300}}"></t-verse>
+    <t-music img='{{movieData.image}}' word='{{movieData.content}}' musicTitle='{{movieData.title}}' musicSrc='{{movieData.url}}' wx:if="{{movieData.type==200}}"></t-music>
   </view>
 
   <view class="content-footer">
