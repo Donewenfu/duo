@@ -1,5 +1,4 @@
-import {books} from '../../models/book'
-let bookModel = new books()
+// pages/like/like.js
 Page({
 
   /**
@@ -13,17 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let hostData = bookModel.getHotBook();
 
-    hostData.then((res)=>{
-      console.log(res)
-      return bookModel.getHotBooktwo()
-    }).then((res)=>{
-      console.log(res)
-      return bookModel.getHotBookthree()
-    }).then((res)=>{
-      console.log(res)
-    })
   },
 
   /**

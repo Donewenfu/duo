@@ -1,24 +1,32 @@
 .content{
     width: 100%;
     .musiccontent{
-        
-        .musicimg{
-            position: relative;
+        position: relative;
+        height: 425rpx;
+        .innermusic{
             width: 425rpx;
             height: 425rpx;
-            border-radius: 50%;
+            position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            margin-top: 38rpx;
+            margin-top: 30rpx;
+            .musicimg{
+                position: relative;
+                width: 425rpx;
+                height: 425rpx;
+                border-radius: 50%;
+            }
+            .musiccontrol{
+                position: absolute;
+                width: 120rpx;
+                height: 120rpx;
+                left: 50%;
+                top: 50%;
+                margin-left: -60rpx;
+                margin-top: -60rpx;
+            }
         }
-        .musiccontrol{
-            position: absolute;
-            width: 120rpx;
-            height: 120rpx;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
-        }
+       
         .tag{
             width: 49rpx;
             height: 146rpx;
@@ -35,4 +43,21 @@
             text-align: center;
         }
     }
+    
+}
+@keyframes roatein {
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.playingmusic{
+    animation: roatein 5s infinite linear;
+    -webkit-animation: roatein 5s infinite linear;
+    transform-origin: center center;
 }

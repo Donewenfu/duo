@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/classic/classic",
-    "pages/book/book"
+    "pages/book/book",
+    "pages/like/like"
   ],
   "requiredBackgroundModes": ["audio", "location"],
   "window": {
@@ -28,6 +29,12 @@
         "text": "书籍",
         "iconPath": "images/tabBar/book.png",
         "selectedIconPath":"images/tabBar/book@highlight.png"
+      },
+      {
+        "pagePath": "pages/like/like",
+        "text": "喜欢",
+        "iconPath": "images/tabBar/my.png",
+        "selectedIconPath": "images/tabBar/my@highlight.png"
       }
     ]
   },

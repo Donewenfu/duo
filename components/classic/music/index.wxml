@@ -1,8 +1,12 @@
 <view class="content">
     <view class="musiccontent">
-       <image class="musicimg" src="{{img}}" >
-        <image class="musiccontrol" bind:tap='clickplay' src="{{openMusic?pauseIcon:playIcon}}" />
+    <view  class="innermusic">
+    <image class="musicimg {{openMusic?'playingmusic':''}}" src="{{img}}" >
+        
        </image>
+       <image class="musiccontrol" bind:tap='clickplay' src="{{openMusic?pauseIcon:playIcon}}" />
+    </view>
+       
        <image class="tag" src="./images/music@tag.png" />
     </view>
     <view class="muscitext">
