@@ -3,7 +3,7 @@ import {books} from '../../models/book'
 let bookModel = new books()
 Page({
   /**
-   * 页面的初始数据
+   * 初始数据
    */
   data: {
     //数据数据
