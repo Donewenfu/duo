@@ -1,0 +1,10 @@
+<view class="content">
+    <view class="book-title">短评</view>
+    <view class="book-comment">
+    <block wx:for='{{commentList}}' wx:key='index'>
+        <t-tag tagclass='{{index==0?"tagone":index==1?"tagtwo":""}}' content='{{item.content}}'>
+            <text class="tagnum" slot='tag-num'>+{{item.nums}}</text>
+        </t-tag>
+    </block>
+    </view>
+</view>

@@ -1,1 +1,21 @@
-/* pages/book/book.wxss */
+.content {
+  background-color: #f5f5f5;
+}
+.content .book-content .book-header {
+  display: flex;
+  justify-content: center;
+}
+.content .book-content .book-header image {
+  width: 104rpx;
+  height: 34rpx;
+  margin: 30rpx 0 30rpx;
+}
+.content .book-content .book-body {
+  padding: 0 86rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.content .book-content .book-body .bookmar {
+  margin-bottom: 58rpx;
+}

@@ -1,0 +1,6 @@
+<view class="content" wx:if="{{comment.length>0}}">
+  <d-book detailData='{{dbook}}'></d-book>
+  <d-comment commentList='{{comment}}'></d-comment>
+  <d-desc content='{{bookcontent}}'></d-desc>
+  <d-info publishData='{{publish}}'></d-info>
+</view>

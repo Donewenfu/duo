@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "d-book":"./components/detail-book/index",
+    "d-comment":"./components/detail-comment/index",
+    "d-desc":"./components/detail-desc/index",
+    "d-info":"./components/detail-info/index"
+  }
+}

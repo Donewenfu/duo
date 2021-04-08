@@ -6,23 +6,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    //热门数据列表
+    hostList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    let hostData = bookModel.getHotBook();
-
-    hostData.then((res)=>{
-      console.log(res)
-      return bookModel.getHotBooktwo()
-    }).then((res)=>{
-      console.log(res)
-      return bookModel.getHotBookthree()
-    }).then((res)=>{
-      console.log(res)
+  onLoad: async function (options) {
+    let hostData = await bookModel.getHotBook();
+    this.setData({
+      hostList:hostData
     })
   },
 

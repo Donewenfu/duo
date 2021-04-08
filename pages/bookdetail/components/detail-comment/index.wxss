@@ -1,0 +1,27 @@
+.content {
+  padding: 30rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+}
+.content .book-title {
+  display: flex;
+  justify-content: center;
+  font-size: 30rpx;
+}
+.content .book-comment {
+  margin-top: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.content .book-comment .tagnum {
+  margin-left: 10rpx;
+  font-size: 20rpx;
+  color: #bbbbbb;
+}
+.content .book-comment .tagone {
+  background-color: #fffadd;
+}
+.content .book-comment .tagtwo {
+  background-color: #eefaff;
+}

@@ -1,0 +1,7 @@
+<view class="content">
+    <view class='searbox'>
+        <text class="iconfont icon-fangdajing"></text>
+        <text class="searchinfo">搜索图书名称</text>
+    </view>
+</view>
+  

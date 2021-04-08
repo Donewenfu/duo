@@ -1,0 +1,6 @@
+<view class="content">
+    <view class="book-title">内容简介</view>
+    <view class="book-content">
+        {{content}}
+    </view>
+</view>

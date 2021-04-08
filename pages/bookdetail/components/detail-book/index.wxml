@@ -1,0 +1,5 @@
+<view class="content">
+    <image class="book-img" src="{{detailData.img}}" />
+    <text class="book-title">{{detailData.title}}</text>
+    <text class="book-auth">{{detailData.auth}}</text>
+</view>

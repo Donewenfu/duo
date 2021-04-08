@@ -1,0 +1,22 @@
+<view class="content">
+    <view class="line-content">
+        <text class="left-name">出版社</text>
+        <text class="right-content">{{publishData.publishName}}</text>
+    </view>
+    <view class="line-content">
+        <text class="left-name">出版年</text>
+        <text class="right-content">{{publishData.publishTime}}</text>
+    </view>
+     <view class="line-content">
+        <text class="left-name">页数</text>
+        <text class="right-content">{{publishData.pageNum}}</text>
+    </view>
+     <view class="line-content">
+        <text class="left-name">定价</text>
+        <text class="right-content">{{publishData.price}}</text>
+    </view>
+     <view class="line-content">
+        <text class="left-name">装帧</text>
+        <text class="right-content">{{publishData.binding}}</text>
+    </view>
+</view>

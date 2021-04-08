@@ -10,16 +10,16 @@ class books extends http{
             url:'book/hot_list'
         })
     }
-    //请求二
-    getHotBooktwo(){
+    //请求数据详情
+    getBookdetai(id){
         return this.request({
-            url:'book/hot_list'
+            url:`book/${id}/detail`
         })
     }
-    //请求三
-    getHotBookthree(){
+    //获取短评数据
+    getComment(id){
         return this.request({
-            url:'book/hot_list'
+            url:`book/${id}/short_comment`
         })
     }
 }

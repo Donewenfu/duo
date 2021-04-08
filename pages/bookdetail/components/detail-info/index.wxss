@@ -1,0 +1,16 @@
+.content {
+  padding: 30rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.content .line-content .left-name {
+  font-size: 26rpx;
+  color: #999;
+  width: 90rpx;
+  display: inline-block;
+}
+.content .line-content .right-content {
+  font-size: 26rpx;
+  color: #666666;
+}

@@ -1,0 +1,4 @@
+<view class="content tagclass">
+    <text class="tag-content">{{content}}</text>
+    <slot name="tag-num"></slot>
+</view>

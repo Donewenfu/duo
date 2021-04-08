@@ -1,2 +1,14 @@
-<!--pages/book/book.wxml-->
-<text>pages/book/book.wxml</text>
+<view class="content">
+  <t-search></t-search>
+  <view class="book-content">
+    <view class="book-header">
+       <image src="./images/bookheader.png" />
+    </view>
+    <view class="book-body">
+      <block wx:for="{{hostList}}" wx:key='index'>
+        <t-book bookDetai='{{item}}' bookitem='bookmar'></t-book>
+      </block>
+      
+    </view>
+  </view>
+</view>

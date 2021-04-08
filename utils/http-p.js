@@ -10,6 +10,9 @@ class http {
     })
   }
   _request(url,resolve,reject,data={},method='GET'){
+    wx.showLoading({
+      title: '数据加载中',
+    })
     wx.request({
       url: config.baseUrl+url,
       data:data,
@@ -22,6 +25,7 @@ class http {
         let statusCode = res.statusCode.toString();
         if(statusCode.startsWith('2')){
           resolve(res.data)
+          wx.hideLoading()
         }else{
           reject()
           wx.showToast({

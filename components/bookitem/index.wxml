@@ -1,0 +1,10 @@
+<view class="content bookitem" bind:tap='gotoDetail'>
+    <image class="book-img" src="{{bookDetai.image}}" />
+    <view class="book-desc">
+        <text class="book-title">{{bookDetai.title}}</text>
+        <text class="book-auth">{{bookDetai.author}}</text>
+        <view class="book-info">
+            <text class="book-like">{{bookDetai.fav_nums}}喜欢</text>
+        </view>
+    </view>
+</view>
