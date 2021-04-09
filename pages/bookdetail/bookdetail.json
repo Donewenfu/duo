@@ -3,6 +3,9 @@
     "d-book":"./components/detail-book/index",
     "d-comment":"./components/detail-comment/index",
     "d-desc":"./components/detail-desc/index",
-    "d-info":"./components/detail-info/index"
+    "d-info":"./components/detail-info/index",
+    "d-btm":"./components/detail-btm/index",
+    "d-maks":"/components/mask/index",
+    "d-comments":"/components/comment/index"
   }
 }

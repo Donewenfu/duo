@@ -22,6 +22,12 @@ class books extends http{
             url:`book/${id}/short_comment`
         })
     }
+    //获取点赞信息
+    getLikeinfo(id){
+        return this.request({
+            url:`book/${id}/favor`
+        })
+    }
 }
 
 export {books}

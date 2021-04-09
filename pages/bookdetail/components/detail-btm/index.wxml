@@ -1,2 +1,9 @@
-<!--pages/bookdetail/components/detail-btm/index.wxml-->
-<text>pages/bookdetail/components/detail-btm/index.wxml</text>
+<view class="content {{isFullSucreen?'fix-Full-button':''}}">
+    <view class="content-left" bind:tap='clickcomment'>
+        <text class="iconfont icon-liuyan"></text>
+        <text class="btm-text">留下你的短评~</text>
+    </view>
+    <view class="content-right">
+        <t-like bindtapLike='clicklike' likeNum='{{likeData.fav_nums}}' isLike='{{likeData.like_status}}'></t-like>
+    </view>
+</view>

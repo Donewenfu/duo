@@ -13,7 +13,11 @@ Page({
     //内容简介
     bookcontent:null,
     //出版信息
-    publish:null
+    publish:null,
+    //数据点赞数据
+    likeInfo:null,
+    //是否显示
+    showComment:false
   },
 
   /**
@@ -35,9 +39,11 @@ Page({
   //请求数据的详情页面
   async getBookDetail(id){
     //详情
-    let data    = await bookModel.getBookdetai(id);
+    let data     = await bookModel.getBookdetai(id);
     //短评
-    let comment =  await bookModel.getComment(id);
+    let comment  = await bookModel.getComment(id);
+    //喜欢
+    let likeInfo = await bookModel.getLikeinfo(id);
     
     let dbook = {
       img:data.images.large,
@@ -55,7 +61,14 @@ Page({
       dbook,
       comment:comment.comments,
       bookcontent:data.summary,
-      publish
+      publish,
+      likeInfo
+    })
+  },
+  //点击评论
+  clickcomments(){
+    this.setData({
+      showComment:true
     })
   },
 

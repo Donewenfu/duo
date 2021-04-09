@@ -3,4 +3,9 @@
   <d-comment commentList='{{comment}}'></d-comment>
   <d-desc content='{{bookcontent}}'></d-desc>
   <d-info publishData='{{publish}}'></d-info>
+  <d-btm bind:clickComment='clickcomments' likeData='{{likeInfo}}' ></d-btm>
 </view>
+
+<d-maks wx:if='{{showComment}}'>
+  <d-comments></d-comments>
+</d-maks>
