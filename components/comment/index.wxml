@@ -1,3 +1,17 @@
-<view class="content">
-    
+<wxs src='../../wxs/filter.wxs' module="filters"></wxs>
+<view class="content animated slideInUp" >
+    <view class="comment-header">
+        <text class="comment-header-cancel" catch:tap='clickCancel'>取消</text>
+        <text class="comment-header-comfirm" catch:tap='clickComfirm'>确定</text>
+    </view>
+    <view class="comment-body">
+        <block wx:for="{{filters.arrLimt(hotComment,2)}}" wx:key='index'>
+            <t-tag bind:clicktag='clicktagevent' content='{{item.content}}' >
+                <text class="tagnum" slot='tag-num'>+{{item.nums}}</text>
+            </t-tag>
+        </block>
+    </view>
+    <view class="comment-footer show">
+        <input bindconfirm='comfirmcontent' bindinput='commentinputevent' auto-focus placeholder="输入您的短评，可输入12字" />
+    </view>
 </view>

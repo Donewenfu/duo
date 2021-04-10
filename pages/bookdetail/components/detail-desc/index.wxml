@@ -1,6 +1,7 @@
+<wxs src='../../../../wxs/filter.wxs' module="filters"></wxs>
 <view class="content">
     <view class="book-title">内容简介</view>
-    <view class="book-content">
-        {{content}}
+    <view class="book-content" >
+        <text  decode='{{true}}' >{{filters.filterString(content)}}</text>
     </view>
 </view>

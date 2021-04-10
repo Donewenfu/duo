@@ -21,6 +21,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    //触摸遮罩
+    cliclmask(){
+      console.log(1)
+    }
   }
 })

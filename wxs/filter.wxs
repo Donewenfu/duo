@@ -1,0 +1,16 @@
+var filterString = function(text){
+    if(text){
+        var regexp = getRegExp('\\\\n','g');
+        var strs = text.replace(regexp,'\n&nbsp;&nbsp;&nbsp;&nbsp;')
+        return strs
+    }
+}
+
+var arrLimt = function(arr,num){
+    return arr.slice(0,num)
+}
+
+module.exports = {
+    filterString:filterString,
+    arrLimt:arrLimt
+}

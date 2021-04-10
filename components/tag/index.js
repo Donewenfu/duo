@@ -21,6 +21,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    clicktag(){
+      //自定义标签点击事件
+      this.triggerEvent('clicktag',{
+        tagtext:this.properties.content,
+        nums:this.properties.nums
+      })
+    }
   }
 })

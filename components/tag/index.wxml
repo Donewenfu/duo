@@ -1,4 +1,4 @@
-<view class="content tagclass">
+<view class="content tagclass" bind:tap='clicktag'>
     <text class="tag-content">{{content}}</text>
     <slot name="tag-num"></slot>
 </view>

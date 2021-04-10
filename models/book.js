@@ -28,6 +28,18 @@ class books extends http{
             url:`book/${id}/favor`
         })
     }
+    //新增短评
+    addComment(id,con){
+        return this.request({
+            url:`book/add/short_comment`,
+            data:{
+                book_id:id,
+                content:con 
+            },
+            method:"POST",
+            ishowLoding:false
+        })
+    }
 }
 
 export {books}

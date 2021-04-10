@@ -7,5 +7,5 @@
 </view>
 
 <d-maks wx:if='{{showComment}}'>
-  <d-comments></d-comments>
+  <d-comments bind:inputEvent='inputEvents' bind:comfirmcontent='comfirms' show='{{showComment}}' bind:comfirm='comfirmright' bind:clicktag='clicktag' hotComment='{{comment}}' bind:cancel='cancelcomment'></d-comments>
 </d-maks>

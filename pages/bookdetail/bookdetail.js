@@ -17,7 +17,9 @@ Page({
     //数据点赞数据
     likeInfo:null,
     //是否显示
-    showComment:false
+    showComment:false,
+    //用户输入的内容
+    commentVal:''
   },
 
   /**
@@ -48,7 +50,8 @@ Page({
     let dbook = {
       img:data.images.large,
       title:data.title,
-      auth:data.author.join('')
+      auth:data.author.join(''),
+      ids:data.id
     }
     let publish = {
       publishName:data.publisher,
@@ -71,7 +74,54 @@ Page({
       showComment:true
     })
   },
-
+  //隐藏评论
+  cancelcomment(){
+    this.setData({
+      showComment:false
+    })
+  },
+  //点击tag标签请求
+  async clicktag(e){
+    let tagtext = e.detail.tagClick
+    this.requestComment(tagtext)
+  },
+  // 评价请求
+  async requestComment(content){
+    if(!content||content.length>12){
+      wx.showToast({
+        title: '内容有误！',
+        icon:'none'
+      })
+      return
+    }
+    let data = await bookModel.addComment(this.data.dbook.ids,content);
+    if(data.msg == 'ok'){
+      wx.showToast({
+        title: '短评成功',
+        icon:''
+      })
+      this.data.comment.unshift({'content':content,'nums':'1'})
+      this.setData({
+        showComment:false,
+        comment:this.data.comment
+      })
+    }
+  },
+  //comfirm事件
+  comfirms(e){
+    let commval  = e.detail.content;
+    this.requestComment(commval)
+  },
+  //点击确认
+  comfirmright(){
+    this.requestComment(this.data.commentVal)
+  },
+  //用户输入事件
+  inputEvents(e){
+    this.setData({
+      commentVal:e.detail.inputval
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -15,4 +15,5 @@
   font-size: 26rpx;
   color: #666;
   line-height: 50rpx;
+  text-indent: 60rpx;
 }

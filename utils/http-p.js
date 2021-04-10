@@ -4,15 +4,17 @@ class http {
   constructor(){
     
   }
-  request({url,data={},method='GET'}){
+  request({url,data={},method='GET',ishowLoding=true}){
     return new Promise((resolve,reject)=>{
-      this._request(url,resolve,reject,data,method)
+      this._request(url,resolve,reject,data,method,ishowLoding)
     })
   }
-  _request(url,resolve,reject,data={},method='GET'){
-    wx.showLoading({
-      title: '数据加载中',
-    })
+  _request(url,resolve,reject,data={},method='GET',ishowLoding=true){
+    if(ishowLoding){
+      wx.showLoading({
+        title: '数据加载中',
+      })
+    }
     wx.request({
       url: config.baseUrl+url,
       data:data,
