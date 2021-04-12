@@ -1,0 +1,4 @@
+<view class="content centercircle">
+  <view class="circleone circle"></view>
+  <view class="circletwo circle"></view>
+</view>

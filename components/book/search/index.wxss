@@ -1,0 +1,34 @@
+.content {
+  margin-top: 140rpx;
+  background-color: #fff;
+}
+.content .loadingcenter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.content .bottomcircle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.content .bookcontent {
+  padding: 30rpx 0;
+}
+.content .bookcontent .contents {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 80rpx;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+.content .bookcontent .contents .bookmar {
+  margin-top: 20rpx;
+}
+.content .no-empty {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

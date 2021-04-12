@@ -12,6 +12,6 @@
         </block>
     </view>
     <view class="comment-footer show">
-        <input bindconfirm='comfirmcontent' bindinput='commentinputevent' auto-focus placeholder="输入您的短评，可输入12字" />
+        <input confirm-type='评论' bindconfirm='comfirmcontent' bindinput='commentinputevent' auto-focus placeholder="输入您的短评，可输入12字" />
     </view>
 </view>

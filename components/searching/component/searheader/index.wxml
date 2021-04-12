@@ -1,0 +1,11 @@
+<view class="content">
+    <view class="search-header">
+            <text class="search-header-text">{{title}}</text>
+        </view>
+        <view class="search-body" wx:if="{{tagArray.length>0}}">
+           <block wx:for='{{tagArray}}' wx:key='index'>
+             <t-tag bind:clicktag='clicktags' content='{{item}}'></t-tag>
+           </block>
+        </view>
+        <view class="no-empty" wx:else>暂无数据!</view>
+</view>

@@ -1,0 +1,8 @@
+<view class='content'>
+    <view class="content-input">
+        <text class="iconfont icon-fangdajing"></text>
+        <input class="innerinput" bindconfirm='searchcomfirm' value='{{val}}' bind:input='searchinput' placeholder="请输入搜索关键字" auto-focus />
+        <text class="iconfont icon-guanbi-" bind:tap="canceltext"></text>
+    </view>
+    <view class="content-close" bind:tap="coloetext">取消</view>
+</view>

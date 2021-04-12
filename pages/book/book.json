@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "t-search":"/components/book/searchbox/index",
-    "t-book":"/components/bookitem/index"
+    "t-book":"/components/bookitem/index",
+    "t-searchs":"/components/book/search/index"
   },
   "navigationBarTitleText":"林白"
 }

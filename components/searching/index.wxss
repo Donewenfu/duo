@@ -1,0 +1,7 @@
+.content {
+  background-color: #fff;
+}
+.content .search-content {
+  padding: 50rpx 24rpx;
+  box-sizing: border-box;
+}

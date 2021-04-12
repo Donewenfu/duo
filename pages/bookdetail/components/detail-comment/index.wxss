@@ -25,3 +25,8 @@
 .content .book-comment .tagtwo {
   background-color: #eefaff;
 }
+.content .nocomment {
+  text-align: center;
+  font-size: 24rpx;
+  color: #666;
+}

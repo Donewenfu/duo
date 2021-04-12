@@ -40,6 +40,13 @@ class books extends http{
             ishowLoding:false
         })
     }
+    //获取热搜关键字
+    getHotkey(){
+        return this.request({
+            url:'book/hot_keyword',
+            ishowLoding:false
+        })
+    }
 }
 
 export {books}

@@ -1,5 +1,5 @@
-<view class="content">
-  <t-search></t-search>
+<view class="content" wx:if="{{!isshowSearch}}">
+  <t-search bind:clicksearch='clickheder'></t-search>
   <view class="book-content">
     <view class="book-header">
        <image src="./images/bookheader.png" />
@@ -8,7 +8,16 @@
       <block wx:for="{{hostList}}" wx:key='index'>
         <t-book bookDetai='{{item}}' bookitem='bookmar'></t-book>
       </block>
-      
     </view>
-  </view>
+  </view>  
 </view>
+
+
+<view wx:else class="content-search">
+  <t-searchs randomnum='{{rannum}}' bind:closesearchbox='closesearchboxs' hotData='{{hotData}}'></t-searchs>
+</view>
+
+
+
+
+

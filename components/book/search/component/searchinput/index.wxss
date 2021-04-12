@@ -1,0 +1,45 @@
+.content {
+  background-color: #fff;
+  padding: 16rpx 18rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  box-sizing: border-box;
+}
+.content .content-input {
+  position: relative;
+  width: 90%;
+}
+.content .content-input .iconfont {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.content .content-input .iconfont:first-child {
+  left: 24rpx;
+  color: #999;
+}
+.content .content-input .iconfont:last-child {
+  right: 24rpx;
+  color: #999;
+}
+.content .content-input .innerinput {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 12rpx 60rpx 15rpx 65rpx;
+  border-radius: 30rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  height: 69rpx;
+  color: #666;
+}
+.content .content-close {
+  font-size: 26rpx;
+  color: #666;
+}

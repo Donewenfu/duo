@@ -1,8 +1,6 @@
-// components/book/searchbox/index.js
+// components/loading/index.js
 Component({
-  options:{
-    addGlobalClass:true
-  },
+  externalClasses:['centercircle'],
   /**
    * 组件的属性列表
    */
@@ -21,8 +19,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    clicksearch(){
-     this.triggerEvent('clicksearch')
-    }
+
   }
 })

@@ -1,0 +1,25 @@
+<view class="content">
+    <t-search bind:cancelback='canceltag' val='{{inputval}}' bind:searchinput='searchData' bind:close='closesearch'>
+    </t-search>
+
+
+    <t-loading centercircle='loadingcenter' wx:if="{{showLoading}}"></t-loading>
+    <view wx:else>
+        <div class="content-searching" wx:if="{{!showbook}}">
+            <t-searching bind:clicktags='tagclick' hotDatas='{{hotData}}' historyData='{{historyArr}}'></t-searching>
+        </div>
+        <view class="bookcontent" wx:else>
+            <view class="contents" wx:if="{{searchBookData.length>0}}">
+                <block wx:for="{{searchBookData}}" wx:key='index'>
+                    <t-book bookitem='bookmar' bookDetai='{{item}}'></t-book>
+                </block>
+            </view>
+
+            <view wx:else class="no-empty">没有搜索内容！</view>
+
+            <t-loading wx:if="{{searchBookData.length<total}}" centercircle='bottomcircle'></t-loading>
+
+        </view>
+    </view>
+
+</view>

@@ -1,4 +1,5 @@
 import {books} from '../../models/book'
+import {randomString} from '../../utils/util'
 let bookModel = new books()
 Page({
 
@@ -7,7 +8,13 @@ Page({
    */
   data: {
     //热门数据列表
-    hostList:[]
+    hostList:[],
+    //热门搜索关键词
+    hotData:[],
+    //是否显示搜索界面
+    isshowSearch:false,
+    //随机字符串
+    rannum:''
   },
 
   /**
@@ -17,6 +24,26 @@ Page({
     let hostData = await bookModel.getHotBook();
     this.setData({
       hostList:hostData
+    })
+  },
+  //点击搜索
+  clickheder(){
+    this.setData({
+      isshowSearch:true
+    })
+    this.getHotData()
+  },
+  //获取热门数据
+  async getHotData(){
+    let data = await bookModel.getHotkey();
+    this.setData({
+      hotData:data.hot
+    })
+  },
+  //关闭搜索
+  closesearchboxs(){
+    this.setData({
+      isshowSearch:false
     })
   },
 
@@ -59,7 +86,9 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this.setData({
+      rannum:randomString(10)
+    })
   },
 
   /**

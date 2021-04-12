@@ -1,0 +1,6 @@
+<view class="content">
+    <view class="search-content">
+        <t-searchheader bind:searchinftag='clicktag' title='历史搜索' tagArray='{{historyData}}'></t-searchheader>
+        <t-searchheader bind:searchinftag='clicktag' title='热门搜索' tagArray='{{hotDatas}}'></t-searchheader>
+    </view>
+</view>

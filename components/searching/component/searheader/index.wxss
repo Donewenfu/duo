@@ -1,0 +1,23 @@
+.content .search-header .search-header-text {
+  font-size: 26rpx;
+}
+.content .search-header .search-header-text::before {
+  display: inline-block;
+  content: '';
+  width: 10rpx;
+  height: 30rpx;
+  background-color: #000;
+  position: relative;
+  top: 5rpx;
+  margin-right: 20rpx;
+}
+.content .search-body {
+  margin-top: 25rpx;
+  margin-left: 20rpx;
+}
+.content .no-empty {
+  padding: 20rpx 0;
+  font-size: 24rpx;
+  color: #666;
+  margin-left: 30rpx;
+}

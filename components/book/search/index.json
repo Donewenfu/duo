@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "t-searching":"../../searching/index",
+    "t-search":"./component/searchinput/index",
+    "t-book":"../../bookitem/index",
+    "t-loading":"../../loading/index"
+  }
+}
