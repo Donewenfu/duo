@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "t-tag":"../../tag/index",
+    "t-like":"../../like/index"
+  }
+}

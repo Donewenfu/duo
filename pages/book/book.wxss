@@ -1,6 +1,9 @@
 .content {
   background-color: #f5f5f5;
 }
+.content .book-content {
+  margin-top: 110rpx;
+}
 .content .book-content .book-header {
   display: flex;
   justify-content: center;

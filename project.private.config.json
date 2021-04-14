@@ -23,6 +23,11 @@
           "pathName": "pages/bookdetail/bookdetail",
           "query": "id=1002&title=123",
           "scene": null
+        },
+        {
+          "name": "pages/like/like",
+          "pathName": "pages/like/like",
+          "scene": null
         }
       ]
     }

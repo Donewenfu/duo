@@ -47,6 +47,14 @@ class books extends http{
             ishowLoding:false
         })
     }
+    //获取我喜欢的期刊
+    getfavorData(data){
+        return this.request({
+            url:'classic/favor',
+            data
+        })
+    }
+
 }
 
 export {books}

@@ -35,7 +35,8 @@ Component({
     //输入框文字
     inputval:'',
     //loding加载
-    showLoading:false
+    showLoading:true,
+    
   },
 
   /**
@@ -48,7 +49,8 @@ Component({
       this.setData({
         showbook:false,
         searchBookData:[],
-        start:0
+        start:0,
+        empty:false
       })
       this.getLocalhistory()
     },
@@ -73,7 +75,8 @@ Component({
       this.setData({
         showLoading:true,
         searchBookData:[],
-        start:0
+        start:0,
+        total:null
       })
       this.searchDatas(keyword)
       

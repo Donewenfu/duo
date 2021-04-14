@@ -10,20 +10,24 @@ const pagination = Behavior({
      //记录条数
       count:20,
       //数据的总条数
-      total:0
+      total:0,
+      //数据是否为空
+      empty:false
   },
   methods:{
     setLoadmore(bookData){
       if(bookData.length<=0){
         this.setData({
-          searchBookData:[]
+          searchBookData:[],
+          empty:true
         })
         return
       }
        //改变开始开始记录数
        this.data.start+=this.data.count
        this.setData({
-        searchBookData:this.data.searchBookData.concat(bookData)
+        searchBookData:this.data.searchBookData.concat(bookData),
+        empty:false
        })
     },
     //判断数据是否已经加载完毕

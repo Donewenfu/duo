@@ -1,0 +1,18 @@
+<view class="content">
+    <view class="left-content">
+        <view class="userinfoarea" wx:if="{{userinfo}}">
+            <image src="{{userinfo.avatarUrl}}" class="useravatar" />
+            <text class="username">{{userinfo.nickName}}</text>
+        </view>
+        <view class="userinfoarea" bind:tap='getuser' wx:else>
+            <image src="/images/my/my.png" class="useravatar" />
+            <text class="username">点击我</text>
+        </view>
+    </view>
+    <view class="right-content">
+        <view class="mybook">
+            <text class="likenum">{{booknum}}</text>
+            <text class="likedesc">我的书单</text>
+        </view>
+    </view>
+</view>

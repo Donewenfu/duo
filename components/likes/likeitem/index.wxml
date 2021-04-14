@@ -1,0 +1,10 @@
+<view class='content'>
+    <view class="l-header">
+        <t-tag content='{{type}}'></t-tag>
+        <t-like likeNum='{{likeObje.fav_nums}}' isLike='{{likeObje.like_status}}' bind:tapLike='clicllike'></t-like>
+    </view>
+    <view class="l-body">
+        <image class="l-body-img"  src="{{likeObje.image}}" mode="aspectFit"/>
+        <text class="l-body-desc">{{likeObje.content}}</text>
+    </view>
+</view>

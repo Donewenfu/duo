@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "t-likeheader":"/components/likes/likeheader/index",
+    "t-likebook":"/components/likes/likeitem/index"
+  }
 }

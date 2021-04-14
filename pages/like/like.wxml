@@ -1,2 +1,15 @@
-<!--pages/like/like.wxml-->
-<text>pages/like/like.wxml</text>
+<view class="content">
+    <t-likeheader booknum='{{likenum}}'></t-likeheader>
+
+    <view class="likearea">
+        <view class="liketitle">
+            <image src="../../images/my/like.png" />
+        </view>
+        <view class="likecontent">
+        <block wx:for='{{liekData}}' wx:key='index'>
+            <t-likebook likeObje='{{item}}'></t-likebook>
+        </block>
+            
+        </view>
+    </view>
+</view>
